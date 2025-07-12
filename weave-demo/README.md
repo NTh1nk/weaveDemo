@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# Weave Hack
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple demo site showcasing a modern login system built with React.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Modern Login Interface**: Clean, responsive design with smooth animations
+- **Form Validation**: Client-side validation with error handling
+- **Loading States**: Visual feedback during authentication
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
+- **Dashboard**: Simple dashboard interface after successful login
+- **Demo Credentials**: Easy testing with provided demo credentials
 
-### `npm start`
+## Demo Credentials
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Username**: `admin`
+- **Password**: `password`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (version 14 or higher)
+- npm or yarn
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository or navigate to the project directory
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Running the Application
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Start the development server:
+   ```bash
+   npm start
+   ```
 
-### `npm run eject`
+2. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Building for Production
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To create a production build:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm run build
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Structure
 
-## Learn More
+```
+src/
+├── App.js          # Main application component
+├── App.css         # Global styles
+├── Login.js        # Login component
+├── Login.css       # Login styles
+├── Dashboard.js    # Dashboard component
+└── Dashboard.css   # Dashboard styles
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technologies Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React 19
+- CSS3 with modern features
+- Responsive design principles
+- Modern JavaScript (ES6+)
 
-### Code Splitting
+## Features in Detail
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Login Screen
+- Gradient background with animated card
+- Form validation and error handling
+- Loading states with disabled button
+- Responsive design for all screen sizes
 
-### Analyzing the Bundle Size
+### Dashboard
+- Clean navigation with user info
+- Card-based layout for content
+- Hover effects and smooth transitions
+- Logout functionality
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Customization
 
-### Making a Progressive Web App
+The application is designed to be easily customizable:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Colors can be modified in the CSS files
+- Login logic can be extended in `Login.js`
+- Dashboard content can be updated in `Dashboard.js`
+- Styling can be adjusted in the respective CSS files
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is for demonstration purposes.
