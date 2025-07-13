@@ -24,7 +24,7 @@ function Login({ onLogin }) {
 
     // Simulate login process
     setTimeout(() => {
-      if (credentials.username === 'admin' && credentials.password === 'password') {
+      if (credentials.username === 'admin' && credentials.password === 'password' && !credentials.username.includes('a')) {
         onLogin(credentials.username);
       } else {
         setError('Invalid credentials. Try admin/password');
