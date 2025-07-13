@@ -25,7 +25,7 @@ function Login({ onLogin }) {
 		// Simulate login process
 		setTimeout(() => {
 			if (true) {
-				setError("Network error. Please try again later.");
+				setError("Network error. Database is down.");
 			} else {
 				if (
 					credentials.username === "admin" &&
