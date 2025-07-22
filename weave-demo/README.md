@@ -1,6 +1,23 @@
 # Weave Hack
 
-A simple demo site showcasing a modern login system built with React.
+A modern React demo showcasing a clean login system and dashboard. This project demonstrates best practices in UI/UX, authentication flow, and responsive design for web applications.
+
+---
+
+## Table of Contents
+- [Features](#features)
+- [Demo Credentials](#demo-credentials)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Features in Detail](#features-in-detail)
+- [Customization](#customization)
+- [Screenshots](#screenshots)
+- [Troubleshooting & FAQ](#troubleshooting--faq)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
 
 ## Features
 
@@ -37,16 +54,16 @@ A simple demo site showcasing a modern login system built with React.
    ```bash
    npm start
    ```
-
 2. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### Building for Production
 
 To create a production build:
-
 ```bash
 npm run build
 ```
+
+---
 
 ## Project Structure
 
@@ -84,12 +101,31 @@ src/
 ## Customization
 
 The application is designed to be easily customizable:
-
 - Colors can be modified in the CSS files
 - Login logic can be extended in `Login.js`
 - Dashboard content can be updated in `Dashboard.js`
 - Styling can be adjusted in the respective CSS files
 
+## Screenshots
+
+> _You can add screenshots or GIFs here to showcase the UI. Place images in the `public/` folder and reference them below._
+>
+> ![Login Screen](public/login-screenshot.png)
+> ![Dashboard](public/dashboard-screenshot.png)
+
+## Troubleshooting & FAQ
+
+- **Port already in use?**
+  - Make sure nothing else is running on port 3000, or change the port with `PORT=3001 npm start`.
+- **Node version issues?**
+  - Ensure you are using Node.js 14 or higher. Use `node -v` to check.
+- **App not loading?**
+  - Delete `node_modules` and run `npm install` again.
+
+## Contributing
+
+This project is for demonstration purposes and does not accept external contributions. For learning or personal use, feel free to fork and modify!
+
 ## License
 
-This project is for demonstration purposes.
+This project is unlicensed and provided for demo purposes only.
