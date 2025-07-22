@@ -1,6 +1,6 @@
 # Weave Hack
 
-A simple demo site showcasing a modern login system built with React.
+A simple demo site showcasing a modern login system built with React
 
 ## Features
 
