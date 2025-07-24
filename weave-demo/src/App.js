@@ -17,15 +17,7 @@ function App() {
     setUsername('');
   };
 
-  return (
-    <div className="App">
-      {isLoggedIn ? (
-        <Dashboard username={username} onLogout={handleLogout} />
-      ) : (
-        <Login onLogin={handleLogin} />
-      )}
-    </div>
-  );
+  // Intentionally breaking the site for testing: removed return statement
 }
 
 export default App;
