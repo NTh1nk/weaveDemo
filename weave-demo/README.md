@@ -93,3 +93,7 @@ The application is designed to be easily customizable:
 ## License
 
 This project is for demonstration purposes.
+
+## Changelog
+
+- Added Changelog section to README for documentation update demonstration.
