@@ -38,7 +38,7 @@ function Login({ onLogin }) {
       <div className="login-card">
         <div className="login-header">
           <h1>Weave Hack</h1>
-          <p>Welcome to the demo site</p>
+          <p>Welcome to the demo site!</p>
         </div>
         
         <form onSubmit={handleSubmit} className="login-form">
