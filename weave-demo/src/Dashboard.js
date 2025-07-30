@@ -32,6 +32,8 @@ function Dashboard({ username, onLogout }) {
               <li>Form validation</li>
               <li>Loading states</li>
               <li>Error handling</li>
+              <li>Remember me functionality</li>
+              <li>Password strength indicator</li>
             </ul>
           </div>
           
@@ -41,8 +43,22 @@ function Dashboard({ username, onLogout }) {
             <ul>
               <li>Login with: admin / password</li>
               <li>Try wrong credentials to see error handling</li>
+              <li>Use "Remember me" to save your username</li>
+              <li>Type in the password field to see strength indicator</li>
               <li>Responsive design on mobile devices</li>
               <li>Smooth animations and transitions</li>
+            </ul>
+          </div>
+          
+          <div className="card">
+            <h3>Password Security</h3>
+            <p>The password strength indicator helps users create stronger passwords by providing real-time feedback on:</p>
+            <ul>
+              <li>Password length (minimum 8 characters)</li>
+              <li>Use of lowercase letters</li>
+              <li>Use of uppercase letters</li>
+              <li>Inclusion of numbers</li>
+              <li>Special characters</li>
             </ul>
           </div>
           
