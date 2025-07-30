@@ -36,6 +36,17 @@
   font-weight: 500;
 }
 
+.remembered-indicator {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.remembered-indicator:hover {
+  opacity: 1;
+}
+
 .logout-button {
   background: #dc3545;
   color: white;

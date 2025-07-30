@@ -2,6 +2,8 @@ import React from 'react';
 import './Dashboard.css';
 
 function Dashboard({ username, onLogout }) {
+  const wasRemembered = localStorage.getItem('rememberedUsername') === username;
+
   return (
     <div className="dashboard-container">
       <nav className="dashboard-nav">
@@ -10,6 +12,11 @@ function Dashboard({ username, onLogout }) {
         </div>
         <div className="nav-user">
           <span>Welcome, {username}!</span>
+          {wasRemembered && (
+            <span className="remembered-indicator" title="You were remembered from previous login">
+              💾
+            </span>
+          )}
           <button onClick={onLogout} className="logout-button">
             Logout
           </button>
@@ -32,6 +39,7 @@ function Dashboard({ username, onLogout }) {
               <li>Form validation</li>
               <li>Loading states</li>
               <li>Error handling</li>
+              <li>Remember me functionality</li>
             </ul>
           </div>
           
@@ -41,6 +49,7 @@ function Dashboard({ username, onLogout }) {
             <ul>
               <li>Login with: admin / password</li>
               <li>Try wrong credentials to see error handling</li>
+              <li>Use "Remember me" to save your username</li>
               <li>Responsive design on mobile devices</li>
               <li>Smooth animations and transitions</li>
             </ul>

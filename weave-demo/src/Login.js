@@ -6,6 +6,7 @@ function Login({ onLogin }) {
     username: '',
     password: ''
   });
+  const [rememberMe, setRememberMe] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -25,6 +26,12 @@ function Login({ onLogin }) {
     // Simulate login process
     setTimeout(() => {
       if (credentials.username === 'admin' && credentials.password === 'password') {
+        // If remember me is checked, save username to localStorage
+        if (rememberMe) {
+          localStorage.setItem('rememberedUsername', credentials.username);
+        } else {
+          localStorage.removeItem('rememberedUsername');
+        }
         onLogin(credentials.username);
       } else {
         setError('Invalid credentials. Try admin/password');
@@ -32,6 +39,18 @@ function Login({ onLogin }) {
       setIsLoading(false);
     }, 1000);
   };
+
+  // Load remembered username on component mount
+  React.useEffect(() => {
+    const rememberedUsername = localStorage.getItem('rememberedUsername');
+    if (rememberedUsername) {
+      setCredentials(prev => ({
+        ...prev,
+        username: rememberedUsername
+      }));
+      setRememberMe(true);
+    }
+  }, []);
 
   return (
     <div className="login-container">
@@ -66,6 +85,18 @@ function Login({ onLogin }) {
               placeholder="Enter password"
               required
             />
+          </div>
+          
+          <div className="form-group checkbox-group">
+            <label className="checkbox-label">
+              <input
+                type="checkbox"
+                checked={rememberMe}
+                onChange={(e) => setRememberMe(e.target.checked)}
+              />
+              <span className="checkmark"></span>
+              Remember me
+            </label>
           </div>
           
           {error && <div className="error-message">{error}</div>}
