@@ -6,6 +6,7 @@ function Login({ onLogin }) {
     username: '',
     password: ''
   });
+  const [rememberMe, setRememberMe] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -25,6 +26,14 @@ function Login({ onLogin }) {
     // Simulate login process
     setTimeout(() => {
       if (credentials.username === 'admin' && credentials.password === 'password') {
+        // Store remember me preference in localStorage if checked
+        if (rememberMe) {
+          localStorage.setItem('rememberMe', 'true');
+          localStorage.setItem('savedUsername', credentials.username);
+        } else {
+          localStorage.removeItem('rememberMe');
+          localStorage.removeItem('savedUsername');
+        }
         onLogin(credentials.username);
       } else {
         setError('Invalid credentials. Try admin/password');
@@ -32,6 +41,20 @@ function Login({ onLogin }) {
       setIsLoading(false);
     }, 1000);
   };
+
+  // Load saved username on component mount
+  React.useEffect(() => {
+    const savedRememberMe = localStorage.getItem('rememberMe');
+    const savedUsername = localStorage.getItem('savedUsername');
+    
+    if (savedRememberMe === 'true' && savedUsername) {
+      setRememberMe(true);
+      setCredentials(prev => ({
+        ...prev,
+        username: savedUsername
+      }));
+    }
+  }, []);
 
   return (
     <div className="login-container">
@@ -68,6 +91,19 @@ function Login({ onLogin }) {
             />
           </div>
           
+          <div className="form-group checkbox-group">
+            <label className="checkbox-label">
+              <input
+                type="checkbox"
+                checked={rememberMe}
+                onChange={(e) => setRememberMe(e.target.checked)}
+                className="remember-checkbox"
+              />
+              <span className="checkmark"></span>
+              Remember me
+            </label>
+          </div>
+          
           {error && <div className="error-message">{error}</div>}
           
           <button 
@@ -75,7 +111,7 @@ function Login({ onLogin }) {
             className="login-button"
             disabled={isLoading}
           >
-            {isLoading ? 'Signing in...' : 'Sign In'}
+            {isLoading ? 'Signing in...' : 'Login'}
           </button>
         </form>
         
