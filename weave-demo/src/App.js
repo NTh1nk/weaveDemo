@@ -4,6 +4,7 @@ import Login from './Login';
 import Dashboard from './Dashboard';
 
 function App() {
+  // Main app component with login state management
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState('');
 
@@ -23,7 +24,7 @@ function App() {
         <Dashboard username={username} onLogout={handleLogout} />
       ) : (
         <Login onLogin={handleLogin} />
-      )}
+        )}
     </div>
   );
 }
