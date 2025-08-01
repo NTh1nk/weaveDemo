@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css';
 
-function Login({ onLogin }) {
+function Login({ onLogin, isDarkMode }) {
   const [credentials, setCredentials] = useState({
     username: '',
     password: ''
@@ -34,7 +34,7 @@ function Login({ onLogin }) {
   };
 
   return (
-    <div className="login-container">
+    <div className={`login-container ${isDarkMode ? 'dark-mode' : ''}`}>
       <div className="login-card">
         <div className="login-header">
           <h1>Weave Hack</h1>

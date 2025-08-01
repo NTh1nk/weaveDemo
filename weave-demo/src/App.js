@@ -6,6 +6,7 @@ import Dashboard from './Dashboard';
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState('');
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const handleLogin = (user) => {
     setUsername(user);
@@ -17,12 +18,21 @@ function App() {
     setUsername('');
   };
 
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
   return (
-    <div className="App">
+    <div className={`App ${isDarkMode ? 'dark-mode' : ''}`}>
       {isLoggedIn ? (
-        <Dashboard username={username} onLogout={handleLogout} />
+        <Dashboard 
+          username={username} 
+          onLogout={handleLogout} 
+          isDarkMode={isDarkMode}
+          onToggleDarkMode={toggleDarkMode}
+        />
       ) : (
-        <Login onLogin={handleLogin} />
+        <Login onLogin={handleLogin} isDarkMode={isDarkMode} />
       )}
     </div>
   );

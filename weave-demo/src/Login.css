@@ -144,4 +144,49 @@
   .login-header h1 {
     font-size: 2rem;
   }
+}
+
+/* Dark mode styles */
+.dark-mode.login-container {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.dark-mode .login-card {
+  background: #2d2d2d;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .login-header h1 {
+  color: #fff;
+}
+
+.dark-mode .login-header p {
+  color: #ccc;
+}
+
+.dark-mode .form-group label {
+  color: #fff;
+}
+
+.dark-mode .form-group input {
+  background: #1a1a1a;
+  border-color: #444;
+  color: #fff;
+}
+
+.dark-mode .form-group input:focus {
+  background: #333;
+  border-color: #667eea;
+}
+
+.dark-mode .form-group input::placeholder {
+  color: #888;
+}
+
+.dark-mode .login-footer {
+  border-top-color: #444;
+}
+
+.dark-mode .login-footer p {
+  color: #ccc;
 } 
