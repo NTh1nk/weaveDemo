@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Dashboard.css';
 
-function Dashboard({ username, onLogout }) {
+function Dashboard({ username, onLogout, isDarkMode, onToggleDarkMode }) {
+  const [loginTime, setLoginTime] = useState('');
+
+  useEffect(() => {
+    const now = new Date();
+    setLoginTime(now.toLocaleString());
+  }, []);
+
   return (
     <div className="dashboard-container">
       <nav className="dashboard-nav">
@@ -10,6 +17,14 @@ function Dashboard({ username, onLogout }) {
         </div>
         <div className="nav-user">
           <span>Welcome, {username}!</span>
+          <span className="login-time">Logged in at: {loginTime}</span>
+          <button 
+            onClick={onToggleDarkMode} 
+            className="theme-toggle-button"
+            title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+          >
+            {isDarkMode ? '☀️' : '🌙'}
+          </button>
           <button onClick={onLogout} className="logout-button">
             Logout
           </button>
