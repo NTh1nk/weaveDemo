@@ -9,7 +9,7 @@ function Dashboard({ username, onLogout }) {
           <h2>Weave Hack</h2>
         </div>
         <div className="nav-user">
-          <span>Welcome, {username}!</span>
+          <span>Welcome back, {username}! 👋</span>
           <button onClick={onLogout} className="logout-button">
             Logout
           </button>
