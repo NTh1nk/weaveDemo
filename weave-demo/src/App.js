@@ -14,6 +14,7 @@ function App() {
   };
 
   const handleLogout = () => {
+    // Clear user session on logout
     setIsLoggedIn(false);
     setUsername('');
   };
