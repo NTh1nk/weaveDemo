@@ -36,6 +36,12 @@
   font-weight: 500;
 }
 
+.login-time {
+  font-size: 0.85rem;
+  color: #888;
+  font-style: italic;
+}
+
 .logout-button {
   background: #dc3545;
   color: white;
