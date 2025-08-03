@@ -1,7 +1,7 @@
 import React from 'react';
 import './Dashboard.css';
 
-function Dashboard({ username, onLogout, darkMode }) {
+function Dashboard({ username, onLogout }) {
   return (
     <div className="dashboard-container">
       <nav className="dashboard-nav">

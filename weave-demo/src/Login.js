@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css';
 
-function Login({ onLogin, darkMode }) {
+function Login({ onLogin }) {
   const [credentials, setCredentials] = useState({
     username: '',
     password: ''
